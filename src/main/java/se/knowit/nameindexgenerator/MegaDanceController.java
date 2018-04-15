@@ -61,12 +61,19 @@ public class MegaDanceController {
         s = s.replaceAll("\\.", "");
 
         // Accenter
-
         s = s.replaceAll("é", "e");
         s = s.replaceAll("è", "e");
         s = s.replaceAll("á", "a");
         s = s.replaceAll("à", "a");
         s = s.replaceAll("ü", "y");
+
+        //Stumma h
+
+        s = s.replaceAll("oh", "o");
+        s = s.replaceAll("ih", "i");
+        s = s.replaceAll("ah", "a");
+        s = s.replaceAll("eh", "e");
+        s = s.replaceAll("uh", "u");
 
         return s;
     }

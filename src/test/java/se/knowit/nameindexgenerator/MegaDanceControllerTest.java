@@ -15,7 +15,8 @@ class MegaDanceControllerTest {
             "Anne-Marie, Annmarie, true",
             "Hezt, Häst, true",
             "Filip Lindquist, Philiph Lindkvist, true",
-            "Iréne, Irene, true"
+            "Iréne, Irene, true",
+            "John Öhlund, Jon Ölund, true"
     })
     void generateNameIndex(String name1, String name2, boolean expected) {
         boolean actual = megaDanceController.isSameName(name1, name2);
