@@ -21,8 +21,9 @@ class NameIndexTest {
             "Rebecca, Rebekah, true",
             "Anne Johansen, Ann Johansson, true",
             "Zälmah Lagerlöfh, Selma Lagerlöv, true",
-            "Erica Janzon, Erik Jansson, true"
-
+            "Erica Janzon, Erik Jansson, true",
+            "Anna Schuabck, Anna Schuback, false",
+            "Rebecca Öfverholm, Maria Österling, false"
     })
     void compareNames(String name1, String name2, boolean expected) {
         String nameIndex1 = nameIndex.generateNameIndex(name1);
@@ -43,4 +44,5 @@ class NameIndexTest {
         String actual = nameIndex.generateNameIndex(name);
         assertEquals(expected, actual);
     }
+
 }
