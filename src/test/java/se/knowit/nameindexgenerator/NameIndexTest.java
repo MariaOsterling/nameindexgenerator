@@ -20,12 +20,27 @@ class NameIndexTest {
             "John Öhlund, Jon Ölund, true",
             "Rebecca, Rebekah, true",
             "Anne Johansen, Ann Johansson, true",
-            "Zälmah Lagerlöfh, Selma Lagerlöv, true"
+            "Zälmah Lagerlöfh, Selma Lagerlöv, true",
+            "Erica Janzon, Erik Jansson, true"
 
     })
-    void generateNameIndex(String name1, String name2, boolean expected) {
-        boolean actual = nameIndex.isSameName(name1, name2);
+    void compareNames(String name1, String name2, boolean expected) {
+        String nameIndex1 = nameIndex.generateNameIndex(name1);
+        String nameIndex2 = nameIndex.generateNameIndex(name2);
+
+        boolean actual = nameIndex1.equals(nameIndex2);
         assertEquals(expected, actual);
     }
-
+    @ParameterizedTest
+    @CsvSource({
+            "Kalle Andersson, kal07",
+            "Christoffer Andersson, .0207",
+            "Eliah Andersson, e-5er-1",
+            "Linda Janzén, -503",
+            "Eric Österberg, .2oster-4"
+    })
+    void checkNameIndex(String name, String expected) {
+        String actual = nameIndex.generateNameIndex(name);
+        assertEquals(expected, actual);
+    }
 }

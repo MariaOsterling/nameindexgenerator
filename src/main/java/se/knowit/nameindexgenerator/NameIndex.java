@@ -5,14 +5,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class NameIndex {
 
-    protected boolean isSameName(String name1, String name2) {
-        String nameIndex1 = generateNameIndex(name1);
-        String nameIndex2 = generateNameIndex(name2);
-
-        return nameIndex1.equals(nameIndex2);
-
-    }
-
     protected String generateNameIndex(String name) {
         String s = name.toLowerCase();
         // Dubbelnamn
