@@ -122,6 +122,8 @@ public class MegaDanceController {
         s = s.replaceAll("karl-1", "06");
         s = s.replaceAll("ander-1", "07");
 
+        s = s.substring(0, Math.min(20, s.length()));
+
         return s;
     }
 }
