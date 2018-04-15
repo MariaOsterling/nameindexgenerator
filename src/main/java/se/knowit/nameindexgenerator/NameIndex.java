@@ -3,7 +3,7 @@ package se.knowit.nameindexgenerator;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MegaDanceController {
+public class NameIndex {
 
     protected boolean isSameName(String name1, String name2) {
         String nameIndex1 = generateNameIndex(name1);

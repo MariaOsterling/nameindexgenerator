@@ -5,9 +5,9 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class MegaDanceControllerTest {
+class NameIndexTest {
 
-    private MegaDanceController megaDanceController = new MegaDanceController();
+    private NameIndex nameIndex = new NameIndex();
 
     @ParameterizedTest
     @CsvSource({
@@ -24,7 +24,7 @@ class MegaDanceControllerTest {
 
     })
     void generateNameIndex(String name1, String name2, boolean expected) {
-        boolean actual = megaDanceController.isSameName(name1, name2);
+        boolean actual = nameIndex.isSameName(name1, name2);
         assertEquals(expected, actual);
     }
 

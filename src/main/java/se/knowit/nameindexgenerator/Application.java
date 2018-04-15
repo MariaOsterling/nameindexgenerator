@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class Application {
 
 	@Autowired
-	private MegaDanceController megaDanceController;
+	private NameIndex nameIndex;
 
 	@RequestMapping(value = "/greeting", method = RequestMethod.GET)
 	public String hello(@RequestParam String name) {
-		return "Hello " + megaDanceController.generateNameIndex(name);
+		return "Hello " + nameIndex.generateNameIndex(name);
 	}
 
 	public static void main(String[] args) {
