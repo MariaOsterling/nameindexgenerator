@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MegaDanceController {
 
-    @RequestMapping(value = "/greeting",method= RequestMethod.GET)
+    @RequestMapping(value = "/greeting", method = RequestMethod.GET)
     public String hello(@RequestParam String name) {
         return "Hello " + generateNameIndex(name);
     }
@@ -21,7 +21,7 @@ public class MegaDanceController {
 
     }
 
-    private String generateNameIndex(String name){
+    private String generateNameIndex(String name) {
         String s = name.toLowerCase();
         // Dubbelnamn
         s = s.replaceAll("e-", "");
@@ -59,6 +59,14 @@ public class MegaDanceController {
         s = s.replaceAll("x", "ks");
         s = s.replaceAll("'", "");
         s = s.replaceAll("\\.", "");
+
+        // Accenter
+
+        s = s.replaceAll("é", "e");
+        s = s.replaceAll("è", "e");
+        s = s.replaceAll("á", "a");
+        s = s.replaceAll("à", "a");
+        s = s.replaceAll("ü", "y");
 
         return s;
     }
