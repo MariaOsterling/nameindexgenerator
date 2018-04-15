@@ -86,6 +86,9 @@ public class MegaDanceController {
         s = s.replaceAll("tt", "t");
         s = s.replaceAll("vv", "v");
 
+        // Bort med sista bokstaven om det är e, a eller h
+        s = s.replaceAll("[eah]$", "");
+
         return s;
     }
 }
