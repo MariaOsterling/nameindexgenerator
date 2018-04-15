@@ -12,7 +12,8 @@ class MegaDanceControllerTest {
     @CsvSource({
             "Mari Österling, mari Österling, true",
             "JON JOHNSON, jon johnson, true",
-            "Anne-Marie, Annmarie, true"
+            "Anne-Marie, Annmarie, true",
+            "Hezt, Häst, true"
     })
     void generateNameIndex(String name1, String name2, boolean expected) {
         boolean actual = megaDanceController.isSameName(name1, name2);
