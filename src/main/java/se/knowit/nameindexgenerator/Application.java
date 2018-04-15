@@ -15,9 +15,9 @@ public class Application {
 	@Autowired
 	private NameIndex nameIndex;
 
-	@RequestMapping(value = "/greeting", method = RequestMethod.GET)
-	public String hello(@RequestParam String name) {
-		return "Hello " + nameIndex.generateNameIndex(name);
+	@RequestMapping(value = "/name-index", method = RequestMethod.GET)
+	public String generateNameIndex(@RequestParam String name) {
+		return nameIndex.generateNameIndex(name);
 	}
 
 	public static void main(String[] args) {
