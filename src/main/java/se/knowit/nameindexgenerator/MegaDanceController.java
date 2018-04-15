@@ -33,6 +33,21 @@ public class MegaDanceController {
         s = s.replaceAll("h ", "");
         s = s.replaceAll(" ", "");
 
+        // Omskrivningar för andra bokstäver
+        s = s.replaceAll("ch", "k");
+        s = s.replaceAll("ck", "k");
+        s = s.replaceAll("ph", "f");
+        s = s.replaceAll("th", "t");
+        s = s.replaceAll("qu", "kv");
+        s = s.replaceAll("qv", "kv");
+        s = s.replaceAll("ea", "a");
+        s = s.replaceAll("oe", "o");
+        s = s.replaceAll("ou", "o");
+        s = s.replaceAll("ae", "e");
+        s = s.replaceAll("aa", "a");
+        s = s.replaceAll("ie", "i");
+        s = s.replaceAll("ia", "i");
+
         // Bort med vissa bokstäver
         s = s.replaceAll("ä", "e");
         s = s.replaceAll("å", "a");
