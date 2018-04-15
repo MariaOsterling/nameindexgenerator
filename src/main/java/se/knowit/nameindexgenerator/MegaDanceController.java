@@ -75,6 +75,17 @@ public class MegaDanceController {
         s = s.replaceAll("eh", "e");
         s = s.replaceAll("uh", "u");
 
+        // Bort med dubbelkonsonanter
+        s = s.replaceAll("bb", "b");
+        s = s.replaceAll("ff", "f");
+        s = s.replaceAll("kk", "k");
+        s = s.replaceAll("ll", "l");
+        s = s.replaceAll("mm", "m");
+        s = s.replaceAll("nn", "n");
+        s = s.replaceAll("ss", "s");
+        s = s.replaceAll("tt", "t");
+        s = s.replaceAll("vv", "v");
+
         return s;
     }
 }
