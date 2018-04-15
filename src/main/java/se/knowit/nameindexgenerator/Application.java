@@ -12,15 +12,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Application {
 
-	@Autowired
-	private NameIndex nameIndex;
+    @Autowired
+    private NameIndex nameIndex;
 
-	@RequestMapping(value = "/name-index", method = RequestMethod.GET)
-	public String generateNameIndex(@RequestParam String name) {
-		return nameIndex.generateNameIndex(name);
-	}
+    @RequestMapping(value = "/name-index", method = RequestMethod.GET)
+    public String generateNameIndex(@RequestParam String name) {
+        return nameIndex.generateNameIndex(name);
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    @RequestMapping(value = "/whats-my-robot-name", method = RequestMethod.GET)
+    public String whatsMyRobotName(@RequestParam(name = "human-name") String humanName) {
+        return nameIndex.generateNameIndex(humanName);
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 }
