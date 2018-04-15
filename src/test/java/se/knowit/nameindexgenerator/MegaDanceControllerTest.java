@@ -18,7 +18,8 @@ class MegaDanceControllerTest {
             "Iréne, Irene, true",
             "John Öhlund, Jon Ölund, true",
             "Rebecca, Rebekah, true",
-            "Anne Johansen, Ann Johansson, true"
+            "Anne Johansen, Ann Johansson, true",
+            "Zälmah Lagerlöfh, Selma Lagerlöv, true"
 
     })
     void generateNameIndex(String name1, String name2, boolean expected) {

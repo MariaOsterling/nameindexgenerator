@@ -29,6 +29,7 @@ public class MegaDanceController {
         s = s.replaceAll("h-", "");
         s = s.replaceAll("-", "");
         s = s.replaceAll("e ", "");
+        s = s.replaceAll("ah ", "");
         s = s.replaceAll("a ", "");
         s = s.replaceAll("h ", "");
         s = s.replaceAll(" ", "");
