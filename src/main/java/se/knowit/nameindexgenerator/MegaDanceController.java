@@ -89,6 +89,39 @@ public class MegaDanceController {
         // Bort med sista bokstaven om det är e, a eller h
         s = s.replaceAll("[eah]$", "");
 
+
+        // Komprimeringar hela namn
+
+        s = s.replaceAll("sara", ".1");
+        s = s.replaceAll("erik", ".2");
+        s = s.replaceAll("daniel", ".3");
+        s = s.replaceAll("karin", ".4");
+        s = s.replaceAll("mari", ".5");
+        s = s.replaceAll("joana", ".6"); // Johanna
+        s = s.replaceAll("malin", ".7");
+        s = s.replaceAll("amanda", ".8");
+        s = s.replaceAll("rebek", ".9"); // Rebecka
+        s = s.replaceAll("aleksand", ".01");
+        s = s.replaceAll("kristover", ".02");
+
+        // Diverse namnled
+        s = s.replaceAll("son", "-1");
+        s = s.replaceAll("sen", "-1");
+        s = s.replaceAll("sin", "-1");
+        s = s.replaceAll("gren", "-2");
+        s = s.replaceAll("kvist", "-3");
+        s = s.replaceAll("berg", "-4");
+        s = s.replaceAll("lind", "-5");
+
+        // Vanliga efternamn
+        s = s.replaceAll("joan-1", "01");
+        s = s.replaceAll("sven-1", "02");
+        s = s.replaceAll("jan-1", "03");
+        s = s.replaceAll("gustav-1", "04");
+        s = s.replaceAll("nil-1", "05");
+        s = s.replaceAll("karl-1", "06");
+        s = s.replaceAll("ander-1", "07");
+
         return s;
     }
 }
